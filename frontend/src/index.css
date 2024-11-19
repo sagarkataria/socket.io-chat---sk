@@ -8,6 +8,6 @@
   font-weight: 400;
 }
 .flex-sagar::-webkit-scrollbar{
-  display:none;
+  width:0px;
 }
 
