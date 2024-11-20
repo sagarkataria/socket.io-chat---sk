@@ -26,9 +26,12 @@ const signUp = async (req, res) => {
     try {
         // Save the new user to the database
         await newUser.save();
+        const createdUser = await User.findById(newUser._id).select(
+            "-password "
+        )
         if (newUser) {
             createTokenSaveCookie(newUser._id, res)
-            res.status(201).json({ message: "User created successfully", newUser });
+            res.status(201).json({ message: "User created successfully", createdUser });
         }
     } catch (error) {
         res.status(500).json({ message: "Error creating user", error: error.message });

@@ -11,8 +11,8 @@ function App() {
         {/* <Logout/>
         <Left />
         <Right /> */}
-        {/* <Signup/> */}
-        <Login/>
+        <Signup/>
+        {/* <Login/> */}
       </div>
     </>
   )
